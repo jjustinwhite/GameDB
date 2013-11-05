@@ -47,6 +47,13 @@ end
 #Secure User Auth
 gem 'bcrypt-ruby', '~> 3.0.0'
 
+#Populate User Database with fake names
+gem 'faker', '1.1.2'
+
+#Pagination
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

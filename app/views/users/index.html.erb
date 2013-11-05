@@ -1,0 +1,12 @@
+<% provide(:title, 'All users') %>
+<div class="container well col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2">
+	<h1>Find Users</h1>
+
+<%= will_paginate %>
+
+<ul class="users">
+  <%= render @users %>
+</ul>
+<%= will_paginate %>
+
+</div>
