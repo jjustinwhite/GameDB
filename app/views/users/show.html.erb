@@ -1,16 +1,18 @@
 <% provide(:title, @user.name) %>
-<div class="row">
-  <div class="col-lg-10 col-lg-offset-1">
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
-        <small><%= @user.email %></small>
-      </h1>
+<div class="container well col-lg-8 col-lg-offset-2">
+  <div class="row">
+    <div class="col-lg-10 col-lg-offset-1">
+        <h1>
+          <%= gravatar_for @user %>
+          <%= @user.name %>
+          <small><%= @user.email %></small>
+        </h1>
+    </div>
   </div>
-</div>
 
-<div class="row">
-	<div class="col-lg-8 col-lg-offset-2">
-	<p>To change your avatar please visit <%= link_to "Gravatar", "http://en.gravatar.com/" %> and sign up.</p>
-	</div>
+  <div class="row">
+  	<div class="col-lg-8 col-lg-offset-2">
+  	<p>To change your avatar please visit <%= link_to "Gravatar", "http://en.gravatar.com/" %> and sign up with the email <strong><%= @user.email %></strong>.</p>
+  	</div>
+  </div>
 </div>

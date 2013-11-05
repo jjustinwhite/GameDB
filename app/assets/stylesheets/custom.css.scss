@@ -10,7 +10,7 @@ $grayMediumLight: #eaeaea;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-
+/* END mixins, variables, etc. */
 
 /* miscellaneous */
 
@@ -22,6 +22,8 @@ $grayMediumLight: #eaeaea;
   @include box_sizing;
 }
 
+/* END miscellaneous */
+
 /* forms */
 #error_explanation {
   ul {
@@ -32,27 +34,57 @@ $grayMediumLight: #eaeaea;
 
 .field_with_errors {
   @extend .control-group;
-  @extend .error;
+  @extend .danger;
 }
 
 /* END Forms */
 
+/* Bootstrap changes */
 
+  /*footer*/
+  html,
+  body {
+    height: 100%;
+  }
+    #footer {
+      height: 60px;
+      background: rgba(116, 124, 130, .6);
+      -webkit-transform: translate3d(0,0,0);
+    }
+
+    #wrap {
+      min-height: 100%;
+      height: auto;
+      /* Negative indent footer by its height */
+      margin: 0 auto -60px;
+      /* Pad bottom by footer height */
+      padding: 0 0 60px;
+    }
+
+    #wrap > .container {
+      padding: 30px 15px 0;
+    }
+    .container .credit {
+      margin: 20px 0;
+    }
+  /*ENDfooter*/
 
 div.container.well 
 {
-  background-color: #CAC3BC;
-  background: rgba(202, 195, 188, .9);
+
+  background: rgba(202, 195, 188, .8);
   -webkit-transform: translate3d(0,0,0);
+  border: none;
 }
+
 
 div.jumbotron{
   background-color: #747C82;
 }
+
 /* Space out content a bit */
 body {
   padding-top: 70px;
-  padding-bottom: 20px;
    background: url(http://unsplash.s3.amazonaws.com/batch%2010/wii.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -80,12 +112,6 @@ body {
   padding-bottom: 19px;
 }
 
-/* Custom page footer */
-.footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
-}
 
 /* Customize container */
 @media (min-width: 768px) {
@@ -133,3 +159,7 @@ body {
     border-bottom: 0;
   }
 }
+
+/* END Bootstrap changes */
+
+

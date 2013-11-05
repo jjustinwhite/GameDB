@@ -9,16 +9,16 @@
 
 
 <body>
-
-<%= render 'layouts/navbar' %>
-<div class="container well">
-	<% flash.each do |key, value| %>
-        <div class="alert alert-<%= key %>"><%= value %></div>
-      <% end %>
-  	<%= yield %>
-  	<%= render 'layouts/footer' %>
-  	<%= debug(params) if Rails.env.development? %>
-</div>
-
+  <div id="wrap">
+    <%= render 'layouts/navbar' %>
+    <div class="container">
+  	<% flash.each do |key, value| %>
+          <div class="alert alert-<%= key %>"><%= value %></div>
+    <% end %>
+    <%= yield %>
+    <%= debug(params) if Rails.env.development? %>
+    </div>
+  </div>
 </body>
+  <%= render 'layouts/footer' %>
 </html>
