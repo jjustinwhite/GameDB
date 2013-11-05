@@ -7,12 +7,8 @@
 
 		<div class="form-group col-sm-offset-2">
 			<%= gravatar_for @user %>
-	    	<button class="btn btn-large btn-default"><a href="http://gravatar.com/emails">change</a></button>
+	    	<button class="btn btn-large btn-default"><%= link_to "change", "http://gravatar.com/emails", :target => "_blank"%></button>
     	</div>
-
-
-
-
 
 	    <%= form_for(@user, :html => { :class => "form-horizontal" }) do |f| %>
 	    	<%= render 'fields', f: f %>
