@@ -8,7 +8,44 @@
     </a>
     <div class="media-body">
       <h1 class="media-heading"><%= @name %></h1>
-      <%= @description %>
+      <p><%= @description %></p>
+
+      <p><strong>Genres: </strong><%= @genre0 %>, <%= @genre1 %></p>
+      <p><strong>Developer: </strong><%= @developers %></p>
+      <p><strong>Publisher: </strong><%= @publishers %></p>
+      <p><strong>Rating: </strong><%= @rating %></p>
+      <p><strong>Release Date: </strong><%= @release_date %></p>
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	    <!-- Carousel
+	    ================================================== -->
+	    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+	      <!-- Indicators -->
+	      <ol class="carousel-indicators">
+	        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+	        <li data-target="#myCarousel" data-slide-to="1"></li>
+	        <li data-target="#myCarousel" data-slide-to="2"></li>
+	        <li data-target="#myCarousel" data-slide-to="3"></li>
+	      </ol>
+	      <div class="carousel-inner">
+	        <div class="item active">
+	          <%= image_tag(@picture1, :class => "img-rounded") %>
+	        </div>
+	        <div class="item">
+	          <%= image_tag(@picture2, :class => "img-rounded") %>
+	        </div>
+	        <div class="item">
+	          <%= image_tag(@picture3, :class => "img-rounded") %>
+	        </div>
+	        <div class="item">
+	          <%= image_tag(@picture4, :class => "img-rounded") %>
+	        </div>
+	      </div>
+	      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><i class="fa fa-2x fa-angle-left "></i></a>
+	      <a class="right carousel-control" href="#myCarousel" data-slide="next"><i class="fa fa-2x fa-angle-right "></i></a>
+	    </div><!-- /.carousel -->
+    </div>
+
     </div>
   </li>
 </ul>

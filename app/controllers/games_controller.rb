@@ -13,11 +13,26 @@ class GamesController < ApplicationController
   def show
     gb = GiantBomb::Search.new("77dcb9ebcdb6c045950580d993599a609aaee78e")
     @game_json = gb.find_game(@game.name)
-
+    
     @img_url = @game_json[0].image["icon_url"]
     @name = @game_json[0].name
     @rating = @game_json[0].original_game_rating
     @description = @game_json[0].deck
+    #genres
+      @genre0 = @game_json[0].genres[0].name
+      @genre1 = @game_json[0].genres[1].name
+
+    @developers = @game_json[0].developers[0].name
+    @publishers = @game_json[0].publishers[0].name
+    @rating = @game_json[0].original_game_rating[0]["name"]
+    @release_date = @game_json[0].original_release_date
+    #Game Pictures
+      @picture1 = @game_json[0].images[0]["screen_url"]
+      @picture2 = @game_json[0].images[1]["screen_url"]
+      @picture3 = @game_json[0].images[2]["screen_url"]
+      @picture4 = @game_json[0].images[3]["screen_url"]
+    
+
   end
 
   # GET /games/new
