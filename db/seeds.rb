@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+
+require 'giant_bomb'
+gb = GiantBomb::Search.new("77dcb9ebcdb6c045950580d993599a609aaee78e")

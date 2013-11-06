@@ -1,0 +1,39 @@
+
+
+<div class="container well">
+<h1>Recent Searches</h1>
+
+
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Picture</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @games.each do |game| %>
+      <tr>
+        <td><%= game.name %></td>
+        <td><%= game.picture %></td>
+        <td><%= link_to 'Show', game %></td>
+        <% if current_user.admin? && !current_user?(user) %>
+          <td><%= link_to 'Edit', edit_game_path(game) %></td>
+          <td><%= link_to 'Destroy', game, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <% end %>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Game', new_game_path %>
+
+</div>

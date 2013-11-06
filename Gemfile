@@ -4,6 +4,8 @@ ruby '2.0.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
+gem 'giant_bomb'
+
 # Use sqlite3 as the database for Active Record for development
 group :development do
   gem 'sqlite3'
@@ -53,6 +55,9 @@ gem 'faker', '1.1.2'
 #Pagination
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+
+#GiantBomb
+gem 'httparty'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

@@ -1,0 +1,5 @@
+<%= form_for(@game, :html => { :class => "form-inline" }) do |f| %>
+      <%= render 'shared/search_error_messages' %>
+      <%= f.text_field :name, :class => 'form-control', :placeholder => 'search for games '  %>
+      <%= f.submit "Find Game", class: "btn btn-primary col-lg-12 col-md-12 col-sm-12 col-xs-12", id: "search-button" %>  
+<% end %>
