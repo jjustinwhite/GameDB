@@ -20,11 +20,10 @@ class GamesController < ApplicationController
     @description = @game_json[0].deck
     #genres
       @genre0 = @game_json[0].genres[0].name
-      @genre1 = @game_json[0].genres[1].name
 
     @developers = @game_json[0].developers[0].name
     @publishers = @game_json[0].publishers[0].name
-    @rating = @game_json[0].original_game_rating[0]["name"]
+    
     @release_date = @game_json[0].original_release_date
     #Game Pictures
       @picture1 = @game_json[0].images[0]["screen_url"]
