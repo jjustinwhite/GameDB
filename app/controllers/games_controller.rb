@@ -37,6 +37,7 @@ class GamesController < ApplicationController
   # GET /games/new
   def new
     @game = Game.new
+    @micropost = current_user.microposts.build if signed_in?
   end
 
   # GET /games/1/edit
